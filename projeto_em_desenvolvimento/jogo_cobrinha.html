@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A cobra vai fumar</title>
+    <link rel="stylesheet" href="menu_style.css">
+    <link rel="stylesheet" href="style_cobrinha.css">
+</head>
+<body>
+     <details>
+        <summary>&#9776;</summary>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="jogo_cobrinha.html">Snake Game</a></li>
+                <li><a href="cassino.html">Caça-Níquel</a></li>
+            </ul>
+        </nav>
+    </details>
+    <div class="container">
+        <h1>Snake Game</h1>
+        <div class="main-content">
+            <div class="game-wrapper">
+                <canvas id="game" width="400" height="400"></canvas>
+                <div id="pontuacao">Pontuação: 0</div>
+                <button id="pauseBtn">Pause SPACE</button>
+            </div>
+            <div id="ranking-container">
+                <h2>Recordes</h2>
+                <ol id="highScoresList"></ol>
+            </div>
+        </div>
+    </div>
+    <script src="jogo_cobrinha.js"></script>    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino 777</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu_style.css">
+    <link rel="stylesheet" href="style_cassino.css">
+</head>
+<body>
+      <details>
+        <summary>&#9776;</summary>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="jogo_cobrinha.html">Snake Game</a></li>
+                <li><a href="cassino.html">Caça-Níquel</a></li>
+            </ul>
+        </nav>
+    </details>
+    <h1>Caça-Níquel</h1>
+    <div class="container-roleta">
+        <div class="slot" id="slot"></div>
+    </div>
+    <div class="saldo" id="saldo">Saldo: 100 moedas</div>
+    <div class="aposta-container">
+        <label for="aposta">Aposta:</label>
+        <input type="number" id="aposta" min="1" value="10" step="1" style="width:60px;">
+    </div>
+    <div class="botoes-container">
+        <button id="girar">Girar</button>
+        <button id="toggleRapido" class="botao-circular" title="Rodada Rápida"></button>
+    </div>
+    <div class="mensagem" id="mensagem"></div>
+    <script src="cassino.js"></script>
+</body>
+</html>

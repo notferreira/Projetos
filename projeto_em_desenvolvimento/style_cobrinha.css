@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background: #1e1e1e;
+    color: #eee;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    border: 4px solid #333;
+    padding: 2rem;
+    border-radius: 15px;
+    background: #2a2a2a;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px #000;
+}
+
+#game {
+    background: #111;
+    display: block;
+    border: 4px solid #ffd700;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+#pontuacao {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#pauseBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-family: 'press start 2p', cursive;
+    font-size: 1rem;
+    color: #1e1e1e;
+    background-color: #ffd700;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px #000;
+    transition: all 0.1s ease-in-out;
+}
+
+#pauseBtn:hover {
+   background-color: #fff;
+}
+
+#pauseBtn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.game-wrapper {
+    text-align: center;
+}
+
+#ranking-container {
+    background-color: #1e1e1e;
+    border: 4px solid #333;
+    padding: 10px 20px; 
+    border-radius: 10px;
+    width: 250px;
+    text-align: left;
+}
+
+#ranking-container h2 {
+    font-size: 1.5rem;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#highScoresList {
+    list-style-type: decimal;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* CORRIGIDO: O seletor estava 'highScoreList li', o correto é '#highScoresList li' */
+#highScoresList li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#highScoresList li span:first-child {
+    margin-right: 15px;
+}

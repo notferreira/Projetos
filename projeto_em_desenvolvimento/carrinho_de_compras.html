@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja Online</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .produto { margin-bottom: 10px; }
+    #carrinho { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>Produtos</h1>
+
+<div class="produto">
+  <span>Produto 1 - R$ 50</span>
+  <button onclick="adicionarAoCarrinho('Produto 1', 50)">Adicionar ao carrinho</button>
+</div>
+
+<div class="produto">
+  <span>Produto 2 - R$ 80</span>
+  <button onclick="adicionarAoCarrinho('Produto 2', 80)">Adicionar ao carrinho</button>
+</div>
+
+<div class="produto">
+  <span>Produto 3 - R$ 30</span>
+  <button onclick="adicionarAoCarrinho('Produto 3', 30)">Adicionar ao carrinho</button>
+</div>
+
+<h2>Carrinho</h2>
+<ul id="carrinho"></ul>
+<p id="total">Total: R$ 0</p>
+
+<script>
+  const listaCarrinho = [];
+  let total = 0;
+
+  function adicionarAoCarrinho(nome, preco) {
+    listaCarrinho.push({ nome, preco });
+    total += preco;
+
+    // Atualiza a lista do carrinho na tela
+    const ul = document.getElementById('carrinho');
+    ul.innerHTML = ''; // limpa a lista
+    listaCarrinho.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nome} - R$ ${item.preco}`;
+      ul.appendChild(li);
+    });
+
+    // Atualiza o total
+    document.getElementById('total').textContent = `Total: R$ ${total}`;
+  }
+</script>
+
+</body>
+</html>

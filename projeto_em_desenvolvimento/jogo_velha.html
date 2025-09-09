@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="stylevelha.css">
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+
+    <div id="mode-selection">
+        <h2>Escolha o modo de jogo:</h2>
+        <button id="vsPlayerBtn">Contra um Amigo</button>
+        <button id="vsAIBtn">Contra a Máquina</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div id="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <p id="status"></p>
+        <button id="restart-button">Reiniciar Jogo</button>
+        <button id="change-mode-button">Trocar Modo</button> </div>
+
+    <script src="jogo_velha.js" defer></script>
+</body>
+</html>

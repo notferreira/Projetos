@@ -1,0 +1,147 @@
+/* Estilos gerais da página com tema Sol vs. Lua */
+body {
+    font-family: 'Poppins', sans-serif; /* Uma fonte mais moderna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Cor de fundo escura e imagem de fundo */
+    background-color: #0c0a1f; /* Um azul bem escuro, quase preto */
+    background-image: url('img/fundo.jpg.jpg'); /* Opcional: se você baixou um fundo */
+    background-size: cover;
+    background-position: center;
+    color: #f0f0f0; /* Cor do texto padrão clara */
+}
+
+h1 {
+    color: #f0f0f0;
+    font-size: 3.5em; /* Aumentei um pouco para mais impacto */
+    font-weight: bold; /* Deixa a fonte mais grossa */
+    /* Sombra mais forte e escura para criar contraste */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
+}
+
+/* Estilo do tabuleiro */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px; /* Aumentei o espaçamento para um visual mais limpo */
+    margin-bottom: 15px;
+}
+
+/* Estilo de cada célula */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 2px solid #6c5ce7; /* Borda com cor de nebulosa (roxo/azul) */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Propriedades para posicionar os ícones */
+    background-size: 70%; /* O ícone ocupará 70% do espaço da célula */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Destaque sutil ao passar o mouse */
+}
+
+/* Define o Sol como o ícone para o jogador 'X' */
+.cell.x {
+    background-image: url('img/sol.png');
+}
+
+/* Define a Lua como o ícone para o jogador 'O' */
+.cell.o {
+    background-image: url('img/lua.png');
+}
+
+/* Estilo do texto de status e do botão */
+#status {
+    font-size: 22px;
+    font-weight: bold;
+    height: 30px;
+    text-shadow: 0 0 5px #fff;
+}
+
+#restart-button {
+  padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold; 
+    border: none; 
+    border-radius: 50px;
+    background-color: #6c5ce7; 
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#restart-button:hover {
+    background-color: #8271ff; 
+    color: #fff;
+    box-shadow: 0 0 20px #8271ff; 
+    transform: translateY(-2px); 
+}
+#status {
+    font-size: 24px; /* Aumentei um pouco o tamanho */
+    font-weight: bold; /* Deixa a fonte mais grossa */
+    
+    /* Mesma técnica de sombra escura */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    margin-bottom: 15px;
+}
+/* Estilos para a tela de seleção de modo */
+#mode-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#mode-selection h2 {
+    font-weight: normal;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+#mode-selection button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #6c5ce7;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 250px; /* Largura fixa para os botões ficarem iguais */
+}
+
+#mode-selection button:hover {
+    background-color: #6c5ce7;
+    color: #fff;
+    box-shadow: 0 0 15px #6c5ce7;
+}
+
+/* Botão para trocar de modo */
+#change-mode-button {
+    margin-left: 10px; /* Espaço entre os botões */
+    background-color: transparent;
+    border: 2px solid #f0f0f0;
+}
+
+#change-mode-button:hover {
+    background-color: #f0f0f0;
+    color: #0c0a1f;
+    box-shadow: 0 0 15px #f0f0f0;
+}
+
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+}
